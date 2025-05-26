@@ -44,8 +44,8 @@ import pandas as pd
 #
 #
 # stock_codes = ['CTG', 'TCB', 'ACV', 'FPT', 'BID', 'HPG', 'TPB', 'ORS', 'KDH', 'TNG', 'VNI']
-stock_codes = ['CAP', 'MSN', 'VIC', 'HPG', 'TCB', 'BID', 'VHC', 'KDH', 'KSB', 'ACV', 'ACB', 'TNG', 'ORS', 'FPT', 'MWG', 'VPI', 'VJC', 'SHS', 'SHB', 'TPB', 'MBB', 'CTG', 'REE', 'PNJ', 'GEE', 'HDB']
-# stock_codes = ['ACB']
+stock_codes = ['VPB', 'CAP', 'MSN', 'VIC', 'HPG', 'TCB', 'BID', 'VHC', 'KDH', 'KSB', 'ACV', 'ACB', 'TNG', 'ORS', 'FPT', 'MWG', 'VPI', 'VJC', 'SHS', 'SHB', 'TPB', 'MBB', 'CTG', 'REE', 'PNJ', 'GEE', 'HDB']
+# stock_codes = ['ACV']
 df = pd.DataFrame(columns=['code', 'price', 'volatility'])
 for stock_code in stock_codes:
   stock = Vnstock().stock(symbol=stock_code, source='VCI')

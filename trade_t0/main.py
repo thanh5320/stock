@@ -14,7 +14,8 @@ from vnstock import Vnstock
 
 stock = Vnstock().stock(symbol='ACB', source='VCI')
 stocks = stock.listing.all_symbols()
-stock_symbols = stocks['ticker'].tolist()
+print(stocks)
+stock_symbols = stocks['symbol'].tolist()
 
 for stock_code in stock_symbols:
     try:

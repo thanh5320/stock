@@ -4,11 +4,15 @@ from vnstock import Vnstock
 from datetime import datetime, timedelta
 
 def rsi(sock_code, window=14, day=datetime.today().date()):
-    stock = Vnstock().stock(symbol=sock_code, source='VCI')
-    df = stock.quote.history(start=str(day - timedelta(days=365)), end=str(day), interval='1D')
-    df["RSI_14"] = ta.momentum.RSIIndicator(df["close"], window=window).rsi()
-    rsi_series = df[["time", "close", "RSI_14"]].tail(1)["RSI_14"]
-    return rsi_series[rsi_series.index[0]]
+    try:
+        stock = Vnstock().stock(symbol=sock_code, source='VCI')
+        df = stock.quote.history(start=str(day - timedelta(days=14)), end=str(day), interval='1D')
+        df["RSI_14"] = ta.momentum.RSIIndicator(df["close"], window=window).rsi()
+        rsi_series = df[["time", "close", "RSI_14"]].tail(1)["RSI_14"]
+        return rsi_series[rsi_series.index[0]]
+    except ValueError:
+        print(f'stock_code: {stock_code} error')
+        return -1
 
 
 # # Lấy dữ liệu giá đóng cửa của mã cổ phiếu (VD: VNM - Vinamilk)
