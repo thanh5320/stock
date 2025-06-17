@@ -44,7 +44,7 @@ import pandas as pd
 #
 #
 # stock_codes = ['CTG', 'TCB', 'ACV', 'FPT', 'BID', 'HPG', 'TPB', 'ORS', 'KDH', 'TNG', 'VNI']
-stock_codes = ['KBC', 'TCM', 'VHC', 'SZC', 'IDC', 'VPB', 'MSN', 'VIC', 'HPG', 'TCB', 'BID', 'VHC', 'KDH', 'ACV', 'ACB', 'TNG', 'ORS', 'FPT', 'MWG', 'VPI', 'VJC', 'SHS', 'SHB', 'TPB', 'MBB', 'CTG', 'REE', 'PNJ', 'GEE', 'HDB']
+stock_codes = ['SSI', 'VCI', 'HCM', 'KBC', 'TCM', 'VHC', 'SZC', 'IDC', 'VPB', 'MSN', 'VIC', 'HPG', 'TCB', 'BID', 'VHC', 'KDH', 'ACV', 'ACB', 'TNG', 'ORS', 'FPT', 'MWG', 'VPI', 'SHB', 'TPB', 'MBB', 'CTG', 'REE', 'PNJ', 'GEE', 'HDB']
 # stock_codes = ['ACV']
 df = pd.DataFrame(columns=['code', 'price', 'volatility'])
 for stock_code in stock_codes:
