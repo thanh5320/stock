@@ -43,5 +43,6 @@ df["time"] = df["time"].dt.tz_convert("Asia/Ho_Chi_Minh")
 
 insert_intraday(df, batch_size=1000)
 # print(df)
+# test
 
 print("Insert completed (duplicates skipped).")
